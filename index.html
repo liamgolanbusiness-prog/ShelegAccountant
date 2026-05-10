@@ -77,15 +77,11 @@
 <body>
   <a class="skip" href="#main">דלג לתוכן הראשי</a>
 
+  <!-- Subtle grid overlay -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+
   <!-- Snow / particle canvas -->
   <canvas id="snow" aria-hidden="true"></canvas>
-
-  <!-- Aurora background blobs -->
-  <div class="aurora" aria-hidden="true">
-    <span class="blob b1"></span>
-    <span class="blob b2"></span>
-    <span class="blob b3"></span>
-  </div>
 
   <!-- Header -->
   <header class="nav" id="nav">
@@ -172,42 +168,44 @@
           </ul>
         </div>
 
-        <!-- 3D stage -->
+        <!-- Dashboard mockup -->
         <div class="hero__stage reveal" data-reveal="fade-left" aria-hidden="true">
+          <span class="halo halo--gold"></span>
+          <span class="halo halo--ice"></span>
           <div class="stage" data-tilt>
-            <!-- Main dashboard card -->
-            <div class="card3d card3d--main">
-              <header class="card3d__head">
-                <span class="dotbtn"></span><span class="dotbtn"></span><span class="dotbtn"></span>
-                <strong>דוח חודשי · אפריל</strong>
+            <article class="dashboard">
+              <header class="dashboard__head">
+                <div class="dashboard__dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <strong class="dashboard__title">דוח חודשי · אפריל</strong>
+                <span class="dashboard__badge">פעיל</span>
               </header>
-              <div class="bars" aria-hidden="true">
-                <i style="--h:36%"></i><i style="--h:64%"></i><i style="--h:48%"></i>
-                <i style="--h:78%"></i><i style="--h:55%"></i><i style="--h:90%"></i>
-                <i style="--h:42%"></i>
+
+              <div class="dashboard__hero">
+                <div class="dashboard__metric">
+                  <em>הכנסה רבעונית</em>
+                  <b>₪ 142,580</b>
+                </div>
+                <span class="dashboard__trend">▲ 18.4%</span>
               </div>
-              <div class="card3d__legend">
-                <span><b class="g">+18.4%</b> צמיחה</span>
-                <span><b>₪ 38,210</b> רווח</span>
+
+              <div class="dashboard__chart">
+                <div class="bars">
+                  <i style="--h:36%"></i><i style="--h:64%"></i><i style="--h:48%"></i>
+                  <i style="--h:78%"></i><i style="--h:55%"></i><i style="--h:90%"></i>
+                  <i style="--h:42%"></i>
+                </div>
+                <div class="dashboard__axis">
+                  <span>ינו</span><span>פבר</span><span>מרץ</span><span>אפר</span><span>מאי</span><span>יוני</span><span>יולי</span>
+                </div>
               </div>
-            </div>
 
-            <!-- Floating revenue chip -->
-            <aside class="floatchip floatchip--revenue">
-              <em>הכנסה רבעונית</em>
-              <b>₪ 142,580</b>
-              <span class="floatchip__trend">▲ +18.4%</span>
-            </aside>
-
-            <!-- Floating status chip -->
-            <aside class="floatchip floatchip--status">
-              <span class="card3d__pill">מע״מ הוגש ✓</span>
-              <span class="card3d__pill alt">דוח 126 מוכן</span>
-            </aside>
-
-            <span class="orbit o1"></span>
-            <span class="orbit o2"></span>
-            <span class="orbit o3"></span>
+              <footer class="dashboard__status">
+                <span class="dashboard__pill ok">✓ מע״מ הוגש</span>
+                <span class="dashboard__pill warn">דוח 126 מוכן</span>
+              </footer>
+            </article>
           </div>
         </div>
       </div>

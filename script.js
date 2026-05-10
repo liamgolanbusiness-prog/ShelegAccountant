@@ -95,13 +95,13 @@
       const r = wrap.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width - .5;
       const y = (e.clientY - r.top) / r.height - .5;
-      tx = -x * 14;
-      ty = y * 14;
+      tx = -x * 6;
+      ty = y * 6;
       if (!raf) raf = requestAnimationFrame(apply);
     };
     const apply = () => {
       raf = null;
-      stage.style.transform = `rotateX(${8 + ty}deg) rotateY(${-12 + tx}deg)`;
+      stage.style.transform = `rotateX(${4 + ty}deg) rotateY(${-6 + tx}deg)`;
     };
     const reset = () => { stage.style.transform = ''; };
     wrap.addEventListener('pointermove', onMove);
