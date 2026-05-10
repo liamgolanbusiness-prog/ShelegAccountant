@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a1330" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>ש.ל.ג חשבונאות ומיסים | רו״ח ינוקא לבן — ייעוץ פיננסי מקצועי</title>
+  <meta name="description" content="ש.ל.ג חשבונאות ומיסים בהובלת רו״ח ינוקא לבן — ליווי חשבונאי, ייעוץ מס, שכר ודוחות שנתיים לעצמאים, חברות ותאגידים. שירות אישי, מקצועי וטכנולוגי." />
+  <meta name="keywords" content="רואה חשבון, חשבונאות, ייעוץ מס, הנהלת חשבונות, שכר, דוחות שנתיים, ש.ל.ג, ינוקא לבן, רו״ח, עוסק מורשה, חברה, מס הכנסה, מע״מ" />
+  <meta name="author" content="ש.ל.ג חשבונאות ומיסים" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://sheleg-cpa.co.il/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="ש.ל.ג חשבונאות ומיסים" />
+  <meta property="og:title" content="ש.ל.ג חשבונאות ומיסים | רו״ח ינוקא לבן" />
+  <meta property="og:description" content="ליווי חשבונאי וייעוץ מס מקצועי לעצמאים, חברות ותאגידים — שירות אישי, מקצועי וטכנולוגי." />
+  <meta property="og:image" content="assets/og-cover.svg" />
+  <meta property="og:url" content="https://sheleg-cpa.co.il/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ש.ל.ג חשבונאות ומיסים | רו״ח ינוקא לבן" />
+  <meta name="twitter:description" content="ייעוץ חשבונאי ומיסים מקצועי — שירות אישי, מודרני וטכנולוגי." />
+  <meta name="twitter:image" content="assets/og-cover.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD: AccountingService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "ש.ל.ג חשבונאות ומיסים",
+    "alternateName": "רואה חשבון ינוקא לבן",
+    "description": "משרד רואה חשבון וייעוץ עסקי בהובלת רו״ח ינוקא לבן — שירותי הנהלת חשבונות, ייעוץ מס, שכר, דוחות שנתיים וליווי שוטף.",
+    "url": "https://sheleg-cpa.co.il/",
+    "logo": "https://sheleg-cpa.co.il/assets/favicon.svg",
+    "image": "https://sheleg-cpa.co.il/assets/og-cover.svg",
+    "telephone": "+972-50-000-0000",
+    "email": "office@sheleg-cpa.co.il",
+    "priceRange": "₪₪",
+    "areaServed": "IL",
+    "inLanguage": "he",
+    "founder": {
+      "@type": "Person",
+      "name": "ינוקא לבן",
+      "jobTitle": "רואה חשבון"
+    },
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://www.instagram.com/",
+      "https://www.linkedin.com/",
+      "https://apps.apple.com/us/app/%D7%A8%D7%95%D7%90%D7%94-%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%99%D7%A0%D7%95%D7%A7%D7%90-%D7%9C%D7%91%D7%9F/id6517361762",
+      "https://play.google.com/store/apps/details?id=finbot.lavanyapp"
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#main">דלג לתוכן הראשי</a>
+
+  <!-- Snow / particle canvas -->
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <!-- Aurora background blobs -->
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  <!-- Header -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="brand" aria-label="ש.ל.ג חשבונאות ומיסים — דף הבית">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="32" height="32">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#9ad7ff"/>
+                <stop offset="1" stop-color="#d4af37"/>
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linecap="round">
+              <path d="M24 4v40"/><path d="M4 24h40"/>
+              <path d="M9.5 9.5l29 29"/><path d="M38.5 9.5l-29 29"/>
+              <circle cx="24" cy="24" r="4" fill="url(#lg)" stroke="none"/>
+            </g>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong>ש.ל.ג</strong>
+          <em>חשבונאות ומיסים</em>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="ניווט ראשי">
+        <a href="#about">אודות</a>
+        <a href="#services">שירותים</a>
+        <a href="#process">תהליך</a>
+        <a href="#stats">מספרים</a>
+        <a href="#testimonials">המלצות</a>
+        <a href="#faq">שאלות</a>
+        <a href="#contact" class="btn btn--ghost btn--sm">צור קשר</a>
+      </nav>
+
+      <button class="nav__toggle" aria-label="פתח תפריט" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile" id="mobile-menu" hidden>
+      <a href="#about">אודות</a>
+      <a href="#services">שירותים</a>
+      <a href="#process">תהליך</a>
+      <a href="#stats">מספרים</a>
+      <a href="#testimonials">המלצות</a>
+      <a href="#faq">שאלות</a>
+      <a href="#contact" class="btn btn--primary">קביעת פגישה</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal" data-reveal="fade-up">
+          <span class="eyebrow">
+            <span class="dot"></span>
+            רו״ח ינוקא לבן · רישיון משרד החשבון בישראל
+          </span>
+          <h1 id="hero-title" class="hero__title">
+            <span class="grad">חשבונאות מדויקת.</span>
+            <span class="grad alt">ייעוץ שמייצר ערך.</span>
+            <span class="hero__title__sub">משרד שמלווה אתכם מהמספרים הקטנים ועד ההחלטות הגדולות.</span>
+          </h1>
+          <p class="hero__lead">
+            ש.ל.ג חשבונאות ומיסים מספק שירותי <strong>הנהלת חשבונות</strong>, <strong>ייעוץ מס</strong>, <strong>שכר</strong> ו<strong>דוחות שנתיים</strong> לעצמאים, חברות ותאגידים — בליווי טכנולוגיה חכמה ושירות אישי.
+          </p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--primary">
+              <span>קביעת שיחת ייעוץ</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#services" class="btn btn--ghost">
+              <span>השירותים שלנו</span>
+            </a>
+          </div>
+
+          <ul class="hero__badges" aria-label="יתרונות מרכזיים">
+            <li><span class="check">✓</span>תגובה תוך 24 שעות</li>
+            <li><span class="check">✓</span>אפליקציה ייעודית ללקוחות</li>
+            <li><span class="check">✓</span>שירות אישי ומקצועי</li>
+          </ul>
+        </div>
+
+        <!-- 3D stack -->
+        <div class="hero__stage reveal" data-reveal="fade-left" aria-hidden="true">
+          <div class="stage" data-tilt>
+            <div class="card3d card3d--back">
+              <div class="card3d__chip"></div>
+              <div class="card3d__rows">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="card3d__total"><b>₪ 142,580</b><em>הכנסה רבעונית</em></div>
+            </div>
+
+            <div class="card3d card3d--mid">
+              <header class="card3d__head">
+                <span class="dotbtn"></span><span class="dotbtn"></span><span class="dotbtn"></span>
+                <strong>דוח חודשי · אפריל</strong>
+              </header>
+              <div class="bars">
+                <i style="--h:36%"></i><i style="--h:64%"></i><i style="--h:48%"></i>
+                <i style="--h:78%"></i><i style="--h:55%"></i><i style="--h:90%"></i>
+                <i style="--h:42%"></i>
+              </div>
+              <div class="card3d__legend">
+                <span><b class="g">+18.4%</b> צמיחה</span>
+                <span><b>₪ 38,210</b> רווח</span>
+              </div>
+            </div>
+
+            <div class="card3d card3d--front">
+              <div class="card3d__pill">מע״מ הוגש ✓</div>
+              <div class="card3d__pill alt">דוח 126 מוכן</div>
+              <div class="card3d__pill mute">תזכורת — מקדמה 15.5</div>
+            </div>
+
+            <span class="orbit o1"></span>
+            <span class="orbit o2"></span>
+            <span class="orbit o3"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- marquee trust bar -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>עוסק מורשה</span><span>·</span>
+          <span>חברות בע״מ</span><span>·</span>
+          <span>שותפויות</span><span>·</span>
+          <span>עמותות</span><span>·</span>
+          <span>היי־טק ואופציות</span><span>·</span>
+          <span>שכירים מורכבים</span><span>·</span>
+          <span>נדל״ן ומיסוי מקרקעין</span><span>·</span>
+          <span>תושבים חוזרים</span><span>·</span>
+          <span>עוסק מורשה</span><span>·</span>
+          <span>חברות בע״מ</span><span>·</span>
+          <span>שותפויות</span><span>·</span>
+          <span>עמותות</span><span>·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="reveal" data-reveal="fade-up">
+          <span class="kicker">אודות המשרד</span>
+          <h2 id="about-title" class="h2">משרד <span class="grad">ש.ל.ג</span> — שילוב של דיוק חשבונאי, חשיבה עסקית וטכנולוגיה.</h2>
+          <p class="lead">
+            בראשות רו״ח <strong>ינוקא לבן</strong>, אנו מלווים עסקים בכל הגדלים — מעצמאים בתחילת דרכם ועד חברות וקבוצות מורכבות. עבודה איתנו היא יותר מהגשת דוחות: חשיבה אסטרטגית, חיסכון במס, וזמינות אמיתית.
+          </p>
+          <p>
+            המשרד פועל בשילוב כלים דיגיטליים מתקדמים — ובכלל זה <a href="https://apps.apple.com/us/app/%D7%A8%D7%95%D7%90%D7%94-%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%99%D7%A0%D7%95%D7%A7%D7%90-%D7%9C%D7%91%D7%9F/id6517361762" rel="noopener" target="_blank">אפליקציה ייעודית ללקוחות</a> לתיעוד הוצאות, הכנסות ודיווח קל ומהיר ישירות אל המשרד.
+          </p>
+
+          <ul class="about__list">
+            <li><b>שקיפות מלאה</b> — אתם תמיד יודעים איפה אתם עומדים.</li>
+            <li><b>זמינות גבוהה</b> — מענה מהיר, גם בעונות העמוסות.</li>
+            <li><b>פתרון מותאם</b> — לא תבנית — אסטרטגיה לכל לקוח.</li>
+          </ul>
+        </div>
+
+        <aside class="about__panel reveal" data-reveal="fade-up">
+          <div class="panel">
+            <h3>מה מייחד אותנו</h3>
+            <div class="featrow">
+              <span class="ic">🛡️</span>
+              <div><b>ביטחון רגולטורי</b><p>הגשות בזמן, התראות חכמות ושיוך הוצאות מדויק.</p></div>
+            </div>
+            <div class="featrow">
+              <span class="ic">📈</span>
+              <div><b>אופטימיזציה של מס</b><p>ניצול מלוא ההטבות — באופן חוקי וחכם.</p></div>
+            </div>
+            <div class="featrow">
+              <span class="ic">📱</span>
+              <div><b>טכנולוגיה ראשונה</b><p>אפליקציה, סנכרון בנקים, חתימה דיגיטלית.</p></div>
+            </div>
+            <div class="featrow">
+              <span class="ic">🤝</span>
+              <div><b>ליווי אישי</b><p>איש קשר אחד שמכיר אתכם ואת העסק שלכם.</p></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="fade-up">
+          <span class="kicker">השירותים שלנו</span>
+          <h2 id="services-title" class="h2">פתרונות מקצה לקצה — <span class="grad">תחת קורת גג אחת</span>.</h2>
+          <p class="lead">בחרו את השירות המתאים לכם — או צרו קשר וניבנה לכם חבילה אישית.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal" data-reveal="zoom" style="--i:0">
+            <span class="card__num">01</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>הנהלת חשבונות</h3>
+            <p>תיעוד מלא, התאמות בנק, סגירות חודש מסודרות ודוחות בזמן אמת — ידנית ודיגיטלית.</p>
+            <a class="card__link" href="#contact">פרטים נוספים<span aria-hidden="true">←</span></a>
+          </article>
+
+          <article class="card reveal" data-reveal="zoom" style="--i:1">
+            <span class="card__num">02</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 6-9 6-9-6 9-6zM3 14l9 6 9-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <h3>ייעוץ מס וייצוג</h3>
+            <p>תכנון מס, דוחות שנתיים, החזרי מס, וייצוג מקצועי מול מס הכנסה, מע״מ וביטוח לאומי.</p>
+            <a class="card__link" href="#contact">פרטים נוספים<span aria-hidden="true">←</span></a>
+          </article>
+
+          <article class="card reveal" data-reveal="zoom" style="--i:2">
+            <span class="card__num">03</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v12H3zM7 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            </div>
+            <h3>שכר וניהול עובדים</h3>
+            <p>תלושי שכר, 126/856, סוציאליות, ייעוץ מעסיקים והתנהלות מול קופות וקרנות.</p>
+            <a class="card__link" href="#contact">פרטים נוספים<span aria-hidden="true">←</span></a>
+          </article>
+
+          <article class="card reveal" data-reveal="zoom" style="--i:3">
+            <span class="card__num">04</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12M9 21v-7h6v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <h3>הקמת חברה ותאגידים</h3>
+            <p>פתיחת תיקים, רישום חברה, מבני בעלות, ליווי מייסדים והכנת תשתית רגולטורית.</p>
+            <a class="card__link" href="#contact">פרטים נוספים<span aria-hidden="true">←</span></a>
+          </article>
+
+          <article class="card reveal" data-reveal="zoom" style="--i:4">
+            <span class="card__num">05</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19l5-7 4 4 7-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <h3>ייעוץ עסקי וליווי שוטף</h3>
+            <p>תקציב, תזרים, תמחור, ניתוחי רווחיות והחלטות אסטרטגיות מבוססות נתונים.</p>
+            <a class="card__link" href="#contact">פרטים נוספים<span aria-hidden="true">←</span></a>
+          </article>
+
+          <article class="card reveal" data-reveal="zoom" style="--i:5">
+            <span class="card__num">06</span>
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <h3>היי־טק, אופציות ו־RSU</h3>
+            <p>תכנון מס לעובדי הייטק, מימוש אופציות, רילוקיישן ותושבים חוזרים — בליווי צמוד.</p>
+            <a class="card__link" href="#contact">פרטים נוספים<span aria-hidden="true">←</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="fade-up">
+          <span class="kicker">איך עובדים איתנו</span>
+          <h2 id="process-title" class="h2">תהליך פשוט. <span class="grad">תוצאות שמדברות.</span></h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal" data-reveal="fade-up">
+            <span class="timeline__num">1</span>
+            <h3>שיחת היכרות</h3>
+            <p>שיחה ללא עלות בה נבין יחד את הצרכים, המבנה והאתגרים שלכם.</p>
+          </li>
+          <li class="timeline__item reveal" data-reveal="fade-up">
+            <span class="timeline__num">2</span>
+            <h3>הצעה מותאמת</h3>
+            <p>חבילת שירות שקופה, ללא הפתעות, עם לוחות זמנים ברורים.</p>
+          </li>
+          <li class="timeline__item reveal" data-reveal="fade-up">
+            <span class="timeline__num">3</span>
+            <h3>קליטה דיגיטלית</h3>
+            <p>חיבור למערכות, אפליקציה והגדרת תהליכי דיווח חכמים.</p>
+          </li>
+          <li class="timeline__item reveal" data-reveal="fade-up">
+            <span class="timeline__num">4</span>
+            <h3>ליווי שוטף</h3>
+            <p>זמינות גבוהה, התראות יזומות ודיווח מסודר — לאורך כל השנה.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section stats" id="stats" aria-labelledby="stats-title">
+      <div class="container stats__grid">
+        <h2 id="stats-title" class="sr-only">מספרים</h2>
+        <div class="stat reveal" data-reveal="fade-up">
+          <span class="stat__num" data-count="350" data-suffix="+">0</span>
+          <span class="stat__label">לקוחות פעילים</span>
+        </div>
+        <div class="stat reveal" data-reveal="fade-up">
+          <span class="stat__num" data-count="15" data-suffix="+">0</span>
+          <span class="stat__label">שנות ניסיון</span>
+        </div>
+        <div class="stat reveal" data-reveal="fade-up">
+          <span class="stat__num" data-count="98" data-suffix="%">0</span>
+          <span class="stat__label">שביעות רצון</span>
+        </div>
+        <div class="stat reveal" data-reveal="fade-up">
+          <span class="stat__num" data-count="24" data-suffix="ש'">0</span>
+          <span class="stat__label">זמן תגובה ממוצע</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testi-title">
+      <div class="container">
+        <header class="section__head reveal" data-reveal="fade-up">
+          <span class="kicker">המלצות לקוחות</span>
+          <h2 id="testi-title" class="h2">אנשים אמיתיים. <span class="grad">תוצאות אמיתיות.</span></h2>
+        </header>
+
+        <div class="slider" data-slider>
+          <div class="slider__track" data-track>
+            <article class="quote">
+              <div class="stars" aria-label="5 כוכבים">★★★★★</div>
+              <p>״עברנו לש.ל.ג לפני שנתיים — מאז העסק רץ אחרת. המקצועיות, הזמינות והשקט הנפשי שווים זהב.״</p>
+              <footer><b>נועה ק.</b> · מנכ״לית, סטודיו עיצוב</footer>
+            </article>
+            <article class="quote">
+              <div class="stars" aria-label="5 כוכבים">★★★★★</div>
+              <p>״ינוקא לבן ליווה אותי בפתיחת חברה ובמעבר ממעמד שכיר לעצמאי. מקצועי, סבלני, מסביר כל דבר.״</p>
+              <footer><b>איתי ר.</b> · יועץ הייטק עצמאי</footer>
+            </article>
+            <article class="quote">
+              <div class="stars" aria-label="5 כוכבים">★★★★★</div>
+              <p>״האפליקציה חוסכת לי שעות עבודה כל חודש. מצלמים קבלה ושוכחים — וקבלת דוחות בזמן.״</p>
+              <footer><b>יעל מ.</b> · בעלת חנות אונליין</footer>
+            </article>
+            <article class="quote">
+              <div class="stars" aria-label="5 כוכבים">★★★★★</div>
+              <p>״הדוחות שלי הוגשו בזמן, החזר מס ענק שלא חלמתי עליו, ויחס אישי שלא מקבלים בכל מקום.״</p>
+              <footer><b>דניאל ע.</b> · אדריכל</footer>
+            </article>
+          </div>
+
+          <div class="slider__nav" role="tablist" aria-label="המלצות">
+            <button data-go="-1" aria-label="הבא">→</button>
+            <button data-go="1" aria-label="הקודם">←</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <header class="reveal" data-reveal="fade-up">
+          <span class="kicker">שאלות נפוצות</span>
+          <h2 id="faq-title" class="h2">כל מה שרציתם <span class="grad">לדעת</span>.</h2>
+          <p class="lead">לא מצאתם תשובה? <a href="#contact">דברו איתנו</a> — נשמח לעזור.</p>
+        </header>
+
+        <div class="faq__list">
+          <details class="reveal" data-reveal="fade-up" open>
+            <summary>אילו עסקים אתם מלווים?</summary>
+            <p>אנחנו עובדים עם כל קשת המבנים העסקיים — עוסק פטור, עוסק מורשה, חברות בע״מ, שותפויות ועמותות — מכל ענף.</p>
+          </details>
+          <details class="reveal" data-reveal="fade-up">
+            <summary>כמה עולה השירות?</summary>
+            <p>המחיר נקבע לפי היקף הפעילות, מספר התנועות החודשי וצרכים מיוחדים. נשמח לתת הצעת מחיר אישית — בלי הפתעות.</p>
+          </details>
+          <details class="reveal" data-reveal="fade-up">
+            <summary>אפשר לעבור אליכם באמצע השנה?</summary>
+            <p>בהחלט. אנחנו דואגים לקליטה חלקה, מיגרציה של נתונים ותיאום מלא מול המשרד הקודם — ללא טלטלות לעסק.</p>
+          </details>
+          <details class="reveal" data-reveal="fade-up">
+            <summary>מה כוללת האפליקציה ללקוחות?</summary>
+            <p>צילום קבלות, מעקב הוצאות והכנסות, דוחות בזמן אמת, התראות, ותקשורת מאובטחת ישירות עם המשרד.</p>
+          </details>
+          <details class="reveal" data-reveal="fade-up">
+            <summary>האם אתם מטפלים גם בתיקים מורכבים — RSU, רילוקיישן, נדל״ן?</summary>
+            <p>כן. יש לנו ניסיון נרחב במיסוי בינלאומי, תושבים חוזרים, אופציות ועובדי הייטק, ובמיסוי מקרקעין.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section ctaband reveal" data-reveal="fade-up" aria-labelledby="cta-title">
+      <div class="container ctaband__inner">
+        <div>
+          <h2 id="cta-title" class="h2">מוכנים להעביר את החשבונאות שלכם <span class="grad">לרמה הבאה?</span></h2>
+          <p>15 דקות שיכולות לחסוך לכם הרבה — מעל הכול, שקט נפשי.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="#contact">לקביעת שיחה ללא עלות</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="reveal" data-reveal="fade-up">
+          <span class="kicker">צור קשר</span>
+          <h2 id="contact-title" class="h2">נשמח <span class="grad">לדבר איתכם</span>.</h2>
+          <p class="lead">השאירו פרטים ונחזור אליכם תוך יום עסקים אחד — או פנו ישירות בערוץ הנוח לכם.</p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="ic">📞</span>
+              <div>
+                <b>טלפון</b>
+                <!-- TODO: החלף במספר אמיתי -->
+                <a href="tel:+972500000000">050-000-0000</a>
+              </div>
+            </li>
+            <li>
+              <span class="ic">✉️</span>
+              <div>
+                <b>אימייל</b>
+                <!-- TODO: החלף בכתובת אמיתית -->
+                <a href="mailto:office@sheleg-cpa.co.il">office@sheleg-cpa.co.il</a>
+              </div>
+            </li>
+            <li>
+              <span class="ic">📍</span>
+              <div>
+                <b>משרד</b>
+                <!-- TODO: החלף בכתובת אמיתית -->
+                <span>ישראל</span>
+              </div>
+            </li>
+            <li>
+              <span class="ic">🕘</span>
+              <div>
+                <b>שעות פעילות</b>
+                <span>א׳–ה׳ · 09:00–18:00</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="socials" aria-label="רשתות חברתיות">
+            <!-- TODO: עדכן קישורים -->
+            <a href="#" aria-label="פייסבוק" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13 22v-8h3l1-4h-4V7.5C13 6.6 13.3 6 14.6 6H17V2.2C16.6 2.1 15.3 2 13.9 2 11.1 2 9 3.7 9 7v3H6v4h3v8h4z"/></svg>
+            </a>
+            <a href="#" aria-label="אינסטגרם" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 7.5A4.5 4.5 0 0 1 7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5z"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="לינקדאין" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4 4h4v4H4zM4 10h4v10H4zM10 10h4v1.7c.6-1 1.9-2 3.6-2 3 0 4.4 2 4.4 5V20h-4v-4.7c0-1.4-.5-2.4-1.8-2.4-1.1 0-1.7.7-2 1.5-.1.3-.2.7-.2 1.1V20h-4z"/></svg>
+            </a>
+            <a href="https://apps.apple.com/us/app/%D7%A8%D7%95%D7%90%D7%94-%D7%97%D7%A9%D7%91%D7%95%D7%9F-%D7%99%D7%A0%D7%95%D7%A7%D7%90-%D7%9C%D7%91%D7%9F/id6517361762" aria-label="App Store" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.5 12.5c0-2.4 1.95-3.55 2.04-3.6-1.11-1.62-2.84-1.84-3.45-1.86-1.47-.15-2.86.86-3.6.86-.74 0-1.89-.84-3.1-.82-1.6.02-3.07.93-3.9 2.36-1.66 2.88-.42 7.13 1.2 9.46.79 1.14 1.73 2.42 2.96 2.37 1.19-.05 1.64-.77 3.08-.77 1.45 0 1.85.77 3.11.74 1.28-.02 2.1-1.16 2.89-2.31.91-1.32 1.29-2.6 1.31-2.66-.03-.02-2.5-.96-2.54-3.77zM14.4 5.4c.66-.81 1.1-1.93.98-3.05-.95.04-2.1.63-2.78 1.43-.61.71-1.15 1.86-1 2.95 1.06.08 2.14-.53 2.8-1.33z"/></svg>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=finbot.lavanyapp" aria-label="Google Play" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3.6 2.6c-.4.3-.6.8-.6 1.4v16c0 .6.2 1.1.6 1.4l9.5-9.4-9.5-9.4zM14.5 13.4l2.5 2.5 4-2.3c.8-.4.8-1.6 0-2l-4-2.3-2.5 2.6.5.4-.5.6.5.5zM4.6 22l9.4-9.4-2.4-2.4L4.6 22zM4.6 2l7 9.8 2.4-2.4L4.6 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="form reveal" data-reveal="fade-up" novalidate aria-labelledby="form-title">
+          <h3 id="form-title">שלחו פנייה</h3>
+          <div class="field">
+            <label for="name">שם מלא</label>
+            <input id="name" name="name" type="text" required autocomplete="name" placeholder="ישראל ישראלי" />
+          </div>
+          <div class="field">
+            <label for="phone">טלפון</label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="050-1234567" pattern="[0-9\-\+\s]{7,}" />
+          </div>
+          <div class="field">
+            <label for="email">אימייל</label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com" />
+          </div>
+          <div class="field">
+            <label for="topic">נושא הפנייה</label>
+            <select id="topic" name="topic" required>
+              <option value="">בחרו נושא…</option>
+              <option>פתיחת תיק / חברה</option>
+              <option>ייעוץ מס</option>
+              <option>הנהלת חשבונות</option>
+              <option>שכר וניהול עובדים</option>
+              <option>תושב חוזר / רילוקיישן</option>
+              <option>אחר</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="msg">הודעה</label>
+            <textarea id="msg" name="msg" rows="4" placeholder="ספרו לנו בקצרה על הצרכים שלכם…"></textarea>
+          </div>
+          <label class="check-row">
+            <input type="checkbox" required /> <span>אני מאשר/ת קבלת מענה ועיבוד הפרטים בהתאם ל<a href="#">מדיניות הפרטיות</a>.</span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg">
+            <span>שליחה</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form__msg" data-msg hidden role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#hero" class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="28" height="28">
+              <g fill="none" stroke="#9ad7ff" stroke-width="2.4" stroke-linecap="round">
+                <path d="M24 4v40"/><path d="M4 24h40"/>
+                <path d="M9.5 9.5l29 29"/><path d="M38.5 9.5l-29 29"/>
+                <circle cx="24" cy="24" r="3.5" fill="#9ad7ff" stroke="none"/>
+              </g>
+            </svg>
+          </span>
+          <span class="brand__text"><strong>ש.ל.ג</strong><em>חשבונאות ומיסים</em></span>
+        </a>
+        <p class="muted">משרד רואה חשבון בהובלת רו״ח ינוקא לבן — חשבונאות מדויקת, ייעוץ עסקי, וטכנולוגיה שעובדת בשבילכם.</p>
+      </div>
+
+      <nav aria-label="ניווט תחתון">
+        <h4>ניווט</h4>
+        <a href="#about">אודות</a>
+        <a href="#services">שירותים</a>
+        <a href="#process">תהליך</a>
+        <a href="#testimonials">המלצות</a>
+        <a href="#faq">שאלות</a>
+        <a href="#contact">צור קשר</a>
+      </nav>
+
+      <div>
+        <h4>שירותים מובילים</h4>
+        <a href="#services">הנהלת חשבונות</a>
+        <a href="#services">ייעוץ מס</a>
+        <a href="#services">שכר</a>
+        <a href="#services">ייעוץ עסקי</a>
+        <a href="#services">תושבים חוזרים</a>
+      </div>
+
+      <div>
+        <h4>נגישות</h4>
+        <p class="muted">האתר פועל לפי תקני נגישות (WCAG 2.1 AA). נתקלתם בבעיה? <a href="#contact">דווחו לנו</a> ונטפל מיד.</p>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <small>© <span id="year"></span> ש.ל.ג חשבונאות ומיסים — כל הזכויות שמורות.</small>
+      <small><a href="#">תנאי שימוש</a> · <a href="#">מדיניות פרטיות</a> · <a href="#">הצהרת נגישות</a></small>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <!-- TODO: עדכן את מספר הוואטסאפ -->
+  <a class="wa" href="https://wa.me/972500000000?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D%20%D7%A9%D7%9C%D7%9B%D7%9D" target="_blank" rel="noopener" aria-label="פתיחת שיחת ווצאפ">
+    <span class="wa__pulse" aria-hidden="true"></span>
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+      <path fill="#fff" d="M19.1 17.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 3 1.3 3.2c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
+      <path fill="#fff" d="M27.1 4.9C24.2 2 20.4.4 16.3.4 7.9.4 1.1 7.2 1.1 15.6c0 2.7.7 5.3 2 7.6L1 31l8.1-2.1c2.2 1.2 4.7 1.8 7.2 1.8 8.4 0 15.2-6.8 15.2-15.2 0-4.1-1.6-7.9-4.4-10.6zM16.3 28.1c-2.3 0-4.5-.6-6.4-1.7l-.5-.3-4.8 1.3 1.3-4.7-.3-.5c-1.3-2-1.9-4.3-1.9-6.6C3.7 8.6 9.4 2.9 16.3 2.9c3.3 0 6.5 1.3 8.8 3.7 2.4 2.4 3.7 5.5 3.7 8.8 0 6.9-5.6 12.7-12.5 12.7z"/>
+    </svg>
+  </a>
+
+  <!-- Back to top -->
+  <button class="totop" aria-label="חזרה למעלה" data-totop>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
