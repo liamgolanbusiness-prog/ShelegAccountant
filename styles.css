@@ -24,9 +24,9 @@
 
   --grad-1: linear-gradient(135deg, #9ad7ff 0%, #d4af37 70%, #f4d27c 100%);
   --grad-2: linear-gradient(135deg, #5eead4 0%, #9ad7ff 50%, #c8b6ff 100%);
-  --grad-bg: radial-gradient(ellipse at 80% -10%, rgba(154,215,255,.18), transparent 60%),
-             radial-gradient(ellipse at 10% 0%, rgba(212,175,55,.16), transparent 55%),
-             linear-gradient(180deg, #05081a 0%, #0a1330 35%, #06091e 100%);
+  --grad-bg: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(154,215,255,.18), transparent 70%),
+             radial-gradient(ellipse 70% 50% at 50% 110%, rgba(212,175,55,.14), transparent 70%),
+             linear-gradient(180deg, #05081a 0%, #0a1330 50%, #06091e 100%);
 
   --shadow-1: 0 6px 30px rgba(0,0,0,.35);
   --shadow-2: 0 20px 60px rgba(0,0,0,.55), 0 0 0 1px var(--line);
@@ -46,6 +46,7 @@
 
 /* ---------- Reset ---------- */
 *,*::before,*::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -87,21 +88,40 @@ a { color: inherit; text-decoration: none; }
 
 .aurora {
   position: fixed; inset: 0; pointer-events: none; z-index: 0;
-  filter: blur(80px); opacity: .55;
+  filter: blur(90px); opacity: .55;
+  overflow: hidden;
 }
 .aurora .blob {
-  position: absolute; width: 50vw; height: 50vw;
-  border-radius: 50%; mix-blend-mode: screen;
-  animation: drift 22s ease-in-out infinite alternate;
-  will-change: transform;
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  width: 60vmin;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  animation: pulseGlow 14s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
-.aurora .b1 { background:#1f4fff; top:-10%; right:-10%; }
-.aurora .b2 { background:#d4af37; bottom:-15%; left:-10%; animation-duration: 28s; }
-.aurora .b3 { background:#5eead4; top:30%; left:30%; width:35vw; height:35vw; animation-duration: 32s; opacity:.55; }
-@keyframes drift {
-  0%   { transform: translate3d(0,0,0) scale(1); }
-  50%  { transform: translate3d(4%,-3%,0) scale(1.1); }
-  100% { transform: translate3d(-3%,4%,0) scale(.95); }
+.aurora .b1 {
+  background: radial-gradient(circle, #1f4fff 0%, transparent 65%);
+  top: -25vmin; left: 50%;
+  transform: translateX(-50%);
+}
+.aurora .b2 {
+  background: radial-gradient(circle, #d4af37 0%, transparent 65%);
+  bottom: -25vmin; left: 50%;
+  transform: translateX(-50%);
+  animation-duration: 18s;
+}
+.aurora .b3 {
+  background: radial-gradient(circle, #5eead4 0%, transparent 65%);
+  top: 45%; left: 50%;
+  width: 45vmin;
+  transform: translate(-50%, -50%);
+  animation-duration: 22s;
+  opacity: .5;
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: .85; }
+  50%      { opacity: 1;   }
 }
 
 main, header, footer { position: relative; z-index: 1; }
@@ -402,11 +422,17 @@ main, header, footer { position: relative; z-index: 1; }
   position: absolute; border-radius: 50%;
   border: 1px dashed rgba(154,215,255,.18);
   pointer-events: none;
+  aspect-ratio: 1 / 1;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
 }
-.orbit.o1 { width: 70%; height: 70%; top: 15%; right: 15%; animation: spin 30s linear infinite; }
-.orbit.o2 { width: 50%; height: 50%; top: 25%; right: 25%; animation: spin 22s linear infinite reverse; border-color: rgba(212,175,55,.18); }
-.orbit.o3 { width: 30%; height: 30%; top: 35%; right: 35%; animation: spin 14s linear infinite; border-color: rgba(94,234,212,.2); }
-@keyframes spin { to { transform: rotate(360deg); } }
+.orbit.o1 { width: 80%; animation: orbitSpin 30s linear infinite; }
+.orbit.o2 { width: 56%; animation: orbitSpin 22s linear infinite reverse; border-color: rgba(212,175,55,.18); }
+.orbit.o3 { width: 32%; animation: orbitSpin 14s linear infinite; border-color: rgba(94,234,212,.2); }
+@keyframes orbitSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
 
 /* Marquee */
 .marquee {
@@ -668,8 +694,13 @@ details p { margin: .75rem 0 0; color: var(--ink-2); }
   position: relative; overflow: hidden;
 }
 .ctaband__inner::before {
-  content: "❄"; position: absolute; left: -2rem; top: -1rem; font-size: 12rem;
-  color: rgba(154,215,255,.06); pointer-events: none;
+  content: "❄";
+  position: absolute;
+  inset: auto auto -3rem -3rem;
+  font-size: 14rem; line-height: 1;
+  color: rgba(154,215,255,.05);
+  pointer-events: none;
+  transform: rotate(-12deg);
 }
 @media (min-width: 800px) {
   .ctaband__inner { grid-template-columns: 1fr auto; gap: 2rem; }
