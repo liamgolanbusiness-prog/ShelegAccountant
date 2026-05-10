@@ -172,23 +172,16 @@
           </ul>
         </div>
 
-        <!-- 3D stack -->
+        <!-- 3D stage -->
         <div class="hero__stage reveal" data-reveal="fade-left" aria-hidden="true">
           <div class="stage" data-tilt>
-            <div class="card3d card3d--back">
-              <div class="card3d__chip"></div>
-              <div class="card3d__rows">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="card3d__total"><b>₪ 142,580</b><em>הכנסה רבעונית</em></div>
-            </div>
-
-            <div class="card3d card3d--mid">
+            <!-- Main dashboard card -->
+            <div class="card3d card3d--main">
               <header class="card3d__head">
                 <span class="dotbtn"></span><span class="dotbtn"></span><span class="dotbtn"></span>
                 <strong>דוח חודשי · אפריל</strong>
               </header>
-              <div class="bars">
+              <div class="bars" aria-hidden="true">
                 <i style="--h:36%"></i><i style="--h:64%"></i><i style="--h:48%"></i>
                 <i style="--h:78%"></i><i style="--h:55%"></i><i style="--h:90%"></i>
                 <i style="--h:42%"></i>
@@ -199,11 +192,18 @@
               </div>
             </div>
 
-            <div class="card3d card3d--front">
-              <div class="card3d__pill">מע״מ הוגש ✓</div>
-              <div class="card3d__pill alt">דוח 126 מוכן</div>
-              <div class="card3d__pill mute">תזכורת — מקדמה 15.5</div>
-            </div>
+            <!-- Floating revenue chip -->
+            <aside class="floatchip floatchip--revenue">
+              <em>הכנסה רבעונית</em>
+              <b>₪ 142,580</b>
+              <span class="floatchip__trend">▲ +18.4%</span>
+            </aside>
+
+            <!-- Floating status chip -->
+            <aside class="floatchip floatchip--status">
+              <span class="card3d__pill">מע״מ הוגש ✓</span>
+              <span class="card3d__pill alt">דוח 126 מוכן</span>
+            </aside>
 
             <span class="orbit o1"></span>
             <span class="orbit o2"></span>

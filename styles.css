@@ -344,52 +344,64 @@ main, header, footer { position: relative; z-index: 1; }
   box-shadow: var(--shadow-2);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  padding: 1.1rem;
+  padding: 1.25rem;
   transform-style: preserve-3d;
   transition: transform .4s var(--ease-spring);
 }
-.card3d--back {
-  width: 78%; height: 60%; top: 4%; right: -4%;
-  transform: translateZ(-60px) rotateZ(-6deg);
-  background: linear-gradient(160deg, rgba(212,175,55,.18), rgba(255,255,255,.02));
-}
-.card3d--mid {
-  width: 88%; height: 64%; top: 18%; right: 6%;
-  transform: translateZ(20px);
-}
-.card3d--front {
-  width: 56%; height: 36%; bottom: 4%; left: 6%;
-  transform: translateZ(80px) rotateZ(5deg);
-  display: grid; grid-template-rows: repeat(3, auto); gap: .55rem; align-content: center;
-  background: linear-gradient(160deg, rgba(94,234,212,.16), rgba(255,255,255,.02));
+
+/* Main dashboard card — centered, takes most of the stage */
+.card3d--main {
+  top: 50%; left: 50%;
+  width: min(92%, 420px);
+  transform: translate3d(-50%, -50%, 0);
 }
 
-.card3d__chip {
-  width: 38px; height: 28px; border-radius: 6px;
-  background: linear-gradient(135deg, #f4d27c, #d4af37);
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.2);
-  margin-bottom: .9rem;
+/* Floating accent chips */
+.floatchip {
+  position: absolute;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-2);
+  background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+  box-shadow: var(--shadow-2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: .85rem 1rem;
+  transform-style: preserve-3d;
 }
-.card3d__rows { display: grid; gap: .55rem; }
-.card3d__rows span {
-  height: 8px; border-radius: 4px;
-  background: linear-gradient(90deg, rgba(154,215,255,.55), rgba(154,215,255,.05));
+.floatchip--revenue {
+  top: 0; right: 0;
+  display: grid; gap: .15rem;
+  transform: translateZ(70px) rotate(-4deg);
+  background: linear-gradient(160deg, rgba(212,175,55,.22), rgba(255,255,255,.03));
 }
-.card3d__rows span:nth-child(2){ width: 80%; }
-.card3d__rows span:nth-child(3){ width: 60%; }
-.card3d__rows span:nth-child(4){ width: 90%; }
-.card3d__total { margin-top: .9rem; }
-.card3d__total b { font-size: 1.4rem; display: block; background: var(--grad-1); -webkit-background-clip: text; background-clip:text; color: transparent; font-weight: 900; }
-.card3d__total em { font-style: normal; color: var(--muted); font-size: .82rem; }
+.floatchip--revenue em {
+  font-style: normal; font-size: .78rem; color: var(--muted);
+  font-weight: 600; letter-spacing: .03em;
+}
+.floatchip--revenue b {
+  font-size: 1.3rem; font-weight: 900; line-height: 1.1;
+  background: var(--grad-1);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.floatchip__trend {
+  font-size: .78rem; font-weight: 700; color: #5eead4;
+}
 
-.card3d__head { display: flex; align-items: center; gap: .35rem; margin-bottom: .9rem; font-size: .85rem; color: var(--ink-2); }
+.floatchip--status {
+  bottom: 0; left: 0;
+  display: flex; flex-direction: column; gap: .4rem;
+  transform: translateZ(60px) rotate(3deg);
+  background: linear-gradient(160deg, rgba(94,234,212,.16), rgba(255,255,255,.03));
+}
+
+.card3d__head { display: flex; align-items: center; gap: .35rem; margin-bottom: 1rem; font-size: .85rem; color: var(--ink-2); }
 .card3d__head strong { margin-inline-start: .5rem; font-weight: 600; }
 .dotbtn { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.3); }
 .dotbtn:nth-child(1){ background:#ff5f57; }
 .dotbtn:nth-child(2){ background:#febc2e; }
 .dotbtn:nth-child(3){ background:#28c840; }
 
-.bars { display: grid; grid-template-columns: repeat(7, 1fr); gap: .5rem; align-items: end; height: 110px; margin-bottom: .8rem; }
+.bars { display: grid; grid-template-columns: repeat(7, 1fr); gap: .5rem; align-items: end; height: 130px; margin-bottom: 1rem; }
 .bars i {
   display: block; height: var(--h, 50%);
   background: linear-gradient(180deg, var(--ice), rgba(154,215,255,.2));
